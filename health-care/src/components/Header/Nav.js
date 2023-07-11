@@ -1,4 +1,4 @@
-export const Nav = () => {
+export const Nav = ({ isUser }) => {
     return (
         <div className="header_bottom">
             <div className="container-fluid">
@@ -16,44 +16,56 @@ export const Nav = () => {
                         <div className="d-flex mr-auto flex-column flex-lg-row align-items-center">
                             <ul className="navbar-nav  ">
                                 <li className="nav-item active">
-                                    <a className="nav-link" href="index.html">Home <span className="sr-only">(current)</span></a>
+                                    <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="about.html"> About</a>
+                                    <a className="nav-link" href="/">Treatment</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="treatment.html">Treatment</a>
+                                    <a className="nav-link" href="/">Doctors</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="doctor.html">Doctors</a>
+                                    <a className="nav-link" href="/">Testimonial</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="testimonial.html">Testimonial</a>
+                                    <a className="nav-link" href="/">Contact Us</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="contact.html">Contact Us</a>
+                                    <a className="nav-link" href="/"> About</a>
                                 </li>
                             </ul>
                         </div>
+
+
                         <div className="quote_btn-container">
-                            <a href="/">
-                                <i className="fa fa-user" aria-hidden="true"></i>
-                                <span>
-                                    Login
-                                </span>
-                            </a>
-                            <a href="/">
-                                <i className="fa fa-user" aria-hidden="true"></i>
-                                <span>
-                                    Name
-                                </span>
-                            </a>
-                            <a href="/">
-                                <i className="fa fa-user" aria-hidden="true"></i>
-                                <span>
-                                    Sign Up
-                                </span>
-                            </a>
+                            {isUser && (
+                                <div>
+                                    <a href="/">
+                                        <i className="fa fa-user" aria-hidden="true"></i> <span>Profile page</span>
+                                    </a>
+                                    <a href="/">
+                                        <i className="fa fa-user" aria-hidden="true"></i> <span>Logout</span>
+                                    </a>
+                                </div>
+                            )}
+
+                            {!isUser && (
+                                <div>
+                                    <a href="/">
+                                        <i className="fa fa-user" aria-hidden="true"></i>
+                                        <span>
+                                            Login
+                                        </span>
+                                    </a>
+
+                                    <a href="/">
+                                        <i className="fa fa-user" aria-hidden="true"></i>
+                                        <span>
+                                            Sign Up
+                                        </span>
+                                    </a>
+                                </div>)}
+
                             <form className="form-inline">
                                 <button className="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                     <i className="fa fa-search" aria-hidden="true"></i>

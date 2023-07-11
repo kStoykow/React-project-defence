@@ -5,7 +5,7 @@ export const Header = () => {
     return (
         <header className="header_section">
             <Contacts />
-            <Nav />
+            <Nav isUser={false} />
         </header>
     );
 }

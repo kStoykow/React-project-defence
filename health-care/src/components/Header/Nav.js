@@ -1,4 +1,4 @@
-export const Nav = ({ isUser }) => {
+export const Nav = ({ isUser, isDoc }) => {
     return (
         <div className="header_bottom">
             <div className="container-fluid">
@@ -39,14 +39,17 @@ export const Nav = ({ isUser }) => {
 
                         <div className="quote_btn-container">
                             {isUser && (
-                                <div>
-                                    <a href="/">
-                                        <i className="fa fa-user" aria-hidden="true"></i> <span>Profile page</span>
-                                    </a>
-                                    <a href="/">
-                                        <i className="fa fa-user" aria-hidden="true"></i> <span>Logout</span>
-                                    </a>
-                                </div>
+                                isDoc
+                                    ? <div>
+                                        <a href="/"><span>Create Appointments</span></a>
+                                        <a href="/"><i className="fa fa-user" aria-hidden="true"></i><span>Profile page</span></a>
+                                        <a href="/"><i className="fa fa-user" aria-hidden="true"></i><span>Logout</span></a>
+                                    </div>
+
+                                    : <div>
+                                        <a href="/"><i className="fa fa-user" aria-hidden="true"></i><span>Profile page</span></a>
+                                        <a href="/"><i className="fa fa-user" aria-hidden="true"></i><span>Logout</span></a>
+                                    </div>
                             )}
 
                             {!isUser && (
@@ -73,8 +76,8 @@ export const Nav = ({ isUser }) => {
                             </form>
                         </div>
                     </div>
-                </nav>
-            </div>
-        </div>
+                </nav >
+            </div >
+        </div >
     );
 }

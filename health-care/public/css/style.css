@@ -721,6 +721,19 @@ a:focus {
   justify-content: center;
 }
 
+.team_section .link {
+  text-align: center;
+}
+
+.team_section .link a {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #252525;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
 .social_box {
   display: flex;
   padding: 20px;

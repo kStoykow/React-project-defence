@@ -16,9 +16,9 @@ export const Card = ({
     }
 
     return (
-        <div className="owl-item active" style={{ width: "240px", marginRight: "15px" }}>
+        <div className="owl-item active" style={{ width: "250px", marginRight: "15px" }}>
             <div className="item" >
-                <div className="owl-item active" style={{ width: "240px", marginRight: "15px" }}>
+                <div className="owl-item active" style={{ width: "250px", marginRight: "15px" }}>
                     <div className="item"></div>
                     <div className="box">
                         <div className="img-box" onClick={onDetailsClick} style={{ cursor: 'pointer' }}><img src={imageUrl} alt="pic" />

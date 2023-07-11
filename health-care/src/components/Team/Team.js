@@ -26,7 +26,16 @@ export const Team = () => {
             city: 'Lovech',
             description: 'Dr. Gabriel Smith is cardiologist with 6 years expirience. In her practice she works with over 62 families in Healthcare Mico.'
         },
-    ]
+        {
+            id: 4,
+            name: 'Olivia Watson',
+            imageUrl: 'https://vestaviavoice.com/downloads/12378/download/WIB---Agile-Physical-Therapy_Lisa-Altamirano_6.jpg?cb=b1380bc0c7a057e54121c498e425c03e&w=2160',
+            spec: 'Rehabilitation',
+            city: 'LA',
+            description: 'Dr. Olivia Watson is rehabilitation therapist, specialised in Physical therapy. However she have qualification for Yumeiho therapy, acupuncture, manual therapy and many more.'
+        },
+    ];
+
     return (
         <section className="team_section layout_padding">
             <div className="container">
@@ -39,6 +48,12 @@ export const Team = () => {
                         <div className="owl-stage-outer" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             {doctors.map(e => <Card key={e.id} {...e} />)}
                         </div>
+
+                        {doctors.length > 4 && (
+                            <div className="link">
+                                <a href="/">See all doctors</a>
+                            </div>
+                        )}
 
                     </div>
                 </div>

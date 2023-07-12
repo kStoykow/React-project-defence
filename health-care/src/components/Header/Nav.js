@@ -1,4 +1,4 @@
-export const Nav = ({ isUser, isDoc }) => {
+export const Nav = ({ isUser,isGuest, isDoc, isAdmin }) => {
     return (
         <div className="header_bottom">
             <div className="container-fluid">
@@ -38,6 +38,7 @@ export const Nav = ({ isUser, isDoc }) => {
 
 
                         <div className="quote_btn-container">
+                            {isAdmin && (<a href="/"><span>Admin panel</span></a>)}
                             {isUser && (
                                 isDoc
                                     ? <div>
@@ -52,7 +53,7 @@ export const Nav = ({ isUser, isDoc }) => {
                                     </div>
                             )}
 
-                            {!isUser && (
+                            {isGuest && (
                                 <div>
                                     <a href="/">
                                         <i className="fa fa-user" aria-hidden="true"></i>

@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState } from "react";
 
+import DatePickerComponent from "./DatePicker";
 import { doctors } from "../../constants";
 import { SelectDoctors } from "./SelectDoctors";
 
@@ -51,18 +52,16 @@ export const BookAppointment = () => {
                                     <label htmlFor="inputPhone">Phone Number</label>
                                     <input type="number" className="form-control" id="inputPhone" placeholder="XXXXXXXXXX" value={phoneNumber} onChange={onChangePhoneNumber} />
                                 </div>
-                                {/* <div className="form-group col-lg-4">
-                                    <label htmlFor="inputSymptoms">Symptoms</label>
-                                    <input type="text" className="form-control" id="inputSymptoms" placeholder="" />
-                                </div> */}
+
                                 <div className="form-group col-lg-4">
                                     <label htmlFor="inputDate">Choose Date </label>
-                                    <div className="input-group date" id="inputDate" data-date-format="mm-dd-yyyy">
+                                    <DatePickerComponent />
+                                    {/* <div className="input-group date" id="inputDate" data-date-format="mm-dd-yyyy">
                                         <input type="text" className="form-control" readOnly />
                                         <span className="input-group-addon date_icon">
                                             <i className="fa fa-calendar" aria-hidden="true"></i>
                                         </span>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <div className="btn-box">

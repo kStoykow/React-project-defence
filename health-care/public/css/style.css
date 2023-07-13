@@ -468,14 +468,14 @@ a:focus {
 
 /* LOGIN css */
 
-.login_section h4 {
+.register_section h4, .login_section h4 {
   position: relative;
   padding-bottom: 5px;
   margin-bottom: 35px;
   color: #00c6a9;
 }
 
-.login_section h4::before {
+.register_section h4::before, .login_section h4::before {
   content: "";
   position: absolute;
   left: 0;
@@ -485,13 +485,13 @@ a:focus {
   background-color: #00c6a9;
 }
 
-.login_section form {
+.register_section form, .login_section form {
   padding: 35px 45px;
   -webkit-box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.07);
   box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.07);
 }
 
-.login_section form .form-control {
+.register_section form .form-control, .login_section form .form-control {
   width: 100%;
   background-color: transparent;
   border: 1px solid #00c6a9;
@@ -503,7 +503,7 @@ a:focus {
   padding: 0 15px;
 }
 
-.login_section form button.btn {
+.register_section form button.btn, .login_section form button.btn {
   background-color: #252525;
   color: #ffffff;
   padding: 10px 45px;

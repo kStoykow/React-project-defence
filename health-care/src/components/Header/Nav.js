@@ -1,4 +1,8 @@
-export const Nav = ({ isUser,isGuest, isDoc, isAdmin }) => {
+import { Route } from 'react';
+import { Treatment } from '../Treatment/Treatment';
+
+
+export const Nav = ({ isUser, isGuest, isDoc, isAdmin }) => {
     return (
         <div className="header_bottom">
             <div className="container-fluid">
@@ -19,7 +23,8 @@ export const Nav = ({ isUser,isGuest, isDoc, isAdmin }) => {
                                     <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/">Treatment</a>
+                                    <Route path='/treatment' element={<Treatment />} />
+                                    {/* <a className="nav-link" href="/">Treatment</a> */}
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/">Doctors</a>

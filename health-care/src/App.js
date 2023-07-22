@@ -1,3 +1,5 @@
+import { NavigationContainer } from '@react-navigation/native';
+
 import './App.css';
 import { Header } from './components/Header/Header';
 import { Slider } from './components/Slider/Slider';
@@ -13,18 +15,20 @@ import { Register } from './components/Register/Register';
 function App() {
 	return (
 		<div>
-			<div className="hero_area">
-				<Header />
-				<Login />
-				<Register />
-				<Slider />
-			</div>
-			<BookAppointment />
-			<Treatment />
-			<Team />
-			<Testimonial />
-			<About />
-			<Footer />
+			<NavigationContainer>
+				<div className="hero_area">
+					<Header />
+					<Login />
+					<Register />
+					<Slider />
+				</div>
+				<BookAppointment />
+				<Treatment />
+				<Team />
+				<Testimonial />
+				<About />
+				<Footer />
+			</NavigationContainer>
 		</div>
 	)
 }
